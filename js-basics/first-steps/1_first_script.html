@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <!-- 
+      As a best practice we should put the script element in the last part of the body section.
+      Because:
+        1- The browser parses the files from top to bottom, so, if the JS script is at the top, 
+          you might have a lot of JS code, and the browser might get busy parsing and extecuting,
+          that JS code, and it wont we able to render the content of the page. The page will be
+          white or blank, while browser is parsing and executing JS code.
+        2- Almost always the code that we have between <script> element need to talk/target to the 
+          elements in this web page. So by adding the code at the end, will be confident that all 
+          these elements are rendered by the browser.
+      Ther are exceptions to this rule, sometimes we are using 3rd parties code that has to be placed
+      in the head sections, but these are exceptions.
+    -->
+    <script src="1_first_script.js">
+      /*
+        We always apply Separation of Concerns, we want to separate html, wich is all about content,
+        from JS, that is used to implement behavior.
+      */
+    </script>
+  </body>
+</html>
