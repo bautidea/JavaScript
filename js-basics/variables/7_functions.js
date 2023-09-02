@@ -3,6 +3,7 @@
     Are one of the fundamental block of JS, it is a set of statements
     that performs a task or calculate a value.
 */
+// This function over here is performing a task.
 // personName is a parameter of this function.
 function greet(personName) {
   /*
@@ -23,3 +24,11 @@ greet("Bauti"); // Here "Bauti" is an argument to the greet function.
   But the argument is the actual value we supply for that 
     function.
 */
+
+// Function that calculates a value.
+function square(number) {
+  return number * number;
+}
+
+let squaredNumber = square(3);
+console.log(squaredNumber);
