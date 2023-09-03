@@ -34,9 +34,9 @@ console.log(false || 1 || 2); // 1.
 let userColor = "red";
 let defaultColor = "blue";
 let currentColor = userColor || defaultColor;
-console.log(currentColor);
+console.log(currentColor); // red.
 
 // Imagine that the user didnt selected a color.
 userColor = "";
 currentColor = userColor || defaultColor;
-console.log(currentColor);
+console.log(currentColor); // blue.
