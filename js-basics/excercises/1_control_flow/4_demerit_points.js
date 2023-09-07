@@ -5,6 +5,10 @@
 // Speed Limit = 70 km/h
 
 /**
+ * Using 'Better code' extension
+ * * important comment.
+ * ! Danger comment.
+ * TODO Things to do.
  * desc
  * @date 2023-09-06
  * @param { * } speed
