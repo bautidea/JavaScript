@@ -4,7 +4,14 @@
 // If a driver gets more than 12 points --> license suspended.
 // Speed Limit = 70 km/h
 
-function checkSpeed(speed) {
+/**
+ * desc
+ * @date 2023-09-06
+ * @param { * } speed
+ * this function does something {@link checkSpeed}
+ */
+
+export async function checkSpeed(speed) {
   const speedLimit = 70;
   const kmPerPoint = 5;
 
