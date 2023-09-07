@@ -18,4 +18,4 @@ function countTruthy(array) {
 
 let arrayvar;
 let funcArray = ["", "hi", 0, 1, arrayvar];
-console.log(countTruthy(funcArray));
+console.log(countTruthy(funcArray)); // 2 = 1 ["hi"], 2 ["1"]
