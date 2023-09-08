@@ -8,6 +8,9 @@
 */
 
 // The purpose of an object is to group relates variables.
+/**
+ * ! This object is created using Object Literal Syntax.
+ */
 let circle = {
   radius: 1,
   location: {
