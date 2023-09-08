@@ -18,22 +18,20 @@ function showPrimes(limit) {
 
 // Another implementation.
 /**
- * TODO --> need to apply single responsibility principle, to separate this function
- * TODO     into small functions, each responsible for a single task.
+ * * In this function im implementing single responsability principle.
+ * We separate a function into sinlge ones, each resposible for a single
+ * task.
  */
 function showPrimes2(limit) {
-  for (number = 1; number <= limit; number++) {
-    let isPrime = true;
+  for (number = 1; number <= limit; number++)
+    if (verifyPrime(number)) console.log(number);
+}
 
-    for (factor = 2; factor < number; factor++) {
-      if (number % factor === 0) {
-        isPrime = false;
-        break;
-      }
-    }
+function verifyPrime(number) {
+  for (let factor = 2; factor < number; factor++)
+    if (number % factor === 0) return false;
 
-    if (isPrime) console.log(number);
-  }
+  return true;
 }
 
 showPrimes(20);
