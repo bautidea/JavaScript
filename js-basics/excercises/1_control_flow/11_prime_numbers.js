@@ -17,6 +17,10 @@ function showPrimes(limit) {
 }
 
 // Another implementation.
+/**
+ * TODO --> need to apply single responsibility principle, to separate this function
+ * TODO     into small functions, each responsible for a single task.
+ */
 function showPrimes2(limit) {
   for (number = 1; number <= limit; number++) {
     let isPrime = true;
