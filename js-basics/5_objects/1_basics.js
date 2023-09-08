@@ -48,7 +48,7 @@ let circleWithFunction = {
   },
   isVisible: true,
   draw: draw(),
-  move: function moveCircle() {
+  move: function () {
     console.log("Moving circle...");
   },
 };
