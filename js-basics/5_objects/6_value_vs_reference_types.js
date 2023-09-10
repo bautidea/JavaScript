@@ -17,7 +17,7 @@
 
 /**
  * * When we work with primitives, the values are stored inside a variable, and
- * * when we copy that variable, that value that is stored in the 1st variable
+ * * when we copy that variable, that value, that is stored in the 1st variable,
  * * is copied to the new variable.
  * ! The variables are completly indipendent of each other.
  * ! Primitives are copied by their value.

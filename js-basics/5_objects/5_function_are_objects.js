@@ -22,9 +22,9 @@ const funCirlce = new Function(
   "radius",
   `
     this.radius = radius;
-      this.draw = function () {
-        console.log("draw");
-      };
+    this.draw = function () {
+      console.log("draw");
+    };
   `
 );
 
