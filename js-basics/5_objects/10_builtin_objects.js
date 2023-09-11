@@ -80,14 +80,36 @@ This is on another`;
 console.log(anotherMsg);
 // We can format our string in the way that i want it to look like.
 // Another benefit of using template literals is the use of Placeholders
-let mailName = 'John :)'
-const anotherMsg2 = 
-` Hi ${mailName},
+let mailName = 'John :)';
+const anotherMsg2 = ` Hi ${mailName},
 
 Thank you for joining my mailing list.
 You are the ${100 * 14} member.
 
 Regards,
-Mosh`
-
+Mosh`;
 console.log(anotherMsg2);
+
+// ! Date built-in object.
+// To find all date supported formats
+// -  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format
+// Lets see different ways of creating a date object.
+// 'Date()' is a constructor function.
+const now = new Date();
+const date1 = new Date('May 11 2018 9:00');
+// Here Date(Year, Month, Date, Hour)
+// Month is represented from 0 (january) to 11 (december).
+const date2 = new Date(2018, 4, 11, 9);
+
+// All these date objects have a bounch of 'get and set' methods.
+// type --> 'now.get' or 'now.set' to explore all diferent now methods.
+now.setFullYear(2017);
+
+// All dates object have methods to convert them into a string
+console.log(now.toDateString()); // --> Mon Sep 11 2017
+
+// This next method return the time component of this date object.
+console.log(now.toTimeString()); // --> 08:05:07 GMT-0300 (hora estndar de Argentina)
+
+// Returns a string as a standard ISO format, its commonly used in web applications.
+console.log(now.toISOString()); // 2017-09-11T11:06:52.899Z
