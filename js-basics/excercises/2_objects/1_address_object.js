@@ -38,5 +38,5 @@ function showAddress(addressObj) {
   }
 }
 
-const address1 = createAddress('Bahia Blanca', '8000', 'Cruz del sur 818');
+const address1 = createAddress('Bahia Blanca', '8000', 'Cruz del sur');
 showAddress(address1);
