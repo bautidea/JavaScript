@@ -4,6 +4,17 @@
 // we will have expensive, moderate and inexpensive restaurants.
 // Restaurants is an object with {name ; price} properties.
 
+// The original excercise was to create a list of range price objects, but ill modify it
+// a bit.
+let PriceRanges = [
+  { label: '$', tooltip: 'Expensive', minPerPerson: 0, maxPerPerson: 10 },
+  { label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20 },
+  { label: '$$$', tooltip: 'Inexpensive', minPerPerson: 21, maxPerPerson: 50 },
+];
+
+let restauranto = [{ averagePerPerson: 5 }];
+
+// ! Below here is my modification.
 /**
  * {@link CreatePriceRange} function creates an object that will host the list of restaurans
  *
