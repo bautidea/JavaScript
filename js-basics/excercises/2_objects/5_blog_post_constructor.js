@@ -6,7 +6,8 @@ let postTitle = 'Post title';
 let postBody = 'Post body';
 let postAuthor = 'Name of the author';
 let postViews = 8520;
-let isPosterLive = true;
+// First they have to sign in so.
+let authorState = true;
 
 function ConstructBlogPost(title, body, author) {
   this.title = title;
@@ -38,8 +39,6 @@ function updateState(post) {
 
 // ! Now lets imagine that someone is going to post a blog.
 // * This have no practical use, it just to test functions.
-// First they have to sign in so.
-let authorState = true;
 
 //  Now this would be a draft, assigning variable as 'let' so i can write over it.
 let post1 = new ConstructBlogPost(
