@@ -24,11 +24,11 @@ function CreateAddress(city, zipCode, street) {
 const address1 = new CreateAddress('a', 'b', 'c');
 const address2 = new CreateAddress('a', 'b', 'c');
 const address3 = new CreateAddress('a', 'b', 'f');
-const address4 = new CreateAddress('d', 'e', 'f');
+const address4 = address1;
 
 /**
- * This function takes two objects and compare if each key : vaule
- * pair are equals.
+ * This function takes two objects and compare if each 'key : vaule'
+ * pair is equal.
  * If they are, returns true otherwise false.
  *
  * @date 2023-09-11
@@ -36,6 +36,51 @@ const address4 = new CreateAddress('d', 'e', 'f');
  * @param { Object } address1
  * @param { Object } address2
  */
-function areEqual(address1, address2) {}
+function areEqual(address1, address2) {
+  // * Appling Signle Resposability Principle.
+  const equalAdresses = checkingEquality(address1, address2);
 
-console.log(areEqual(address1, address5));
+  if (equalAdresses) return console.log('Equal addresses');
+  return console.log('Addresses are different');
+}
+
+/**
+ * * Appling Single Resposability Principle
+ * to differentiate actions. This function is in chanrge of checking
+ * if each key and each value in address1 is on address2.
+ * {@link checkingEquality}
+ *
+ * @date 2023-09-12
+ *
+ * @param { Object } address1 - Passed through 'areEqual' function.
+ * @param { Object } address2 - Passed through 'areEqual' function.
+ */
+function checkingEquality(address1, address2) {
+  for (let key in address1) {
+    if (address2[key] && address1[key] === address2[key]) continue;
+    else return false;
+  }
+
+  return true;
+}
+
+/**
+ * This function tells if two given objects are pointing to the same object,
+ * the same memory space.
+ *
+ * @date 2023-09-12
+ *
+ * @param { Object } address1
+ * @param { Object } address2
+ */
+function areSame(address1, address2) {
+  if (address1 === address2)
+    return console.log('Objects referencing the same memory space');
+  return console.log('Objects are not referencing the same memory space');
+}
+
+areEqual(address1, address2); // --> Equal addresses
+areEqual(address1, address3); // --> Addresses are different
+
+areSame(address1, address2); // --> Objects are not referencing the same memory space
+areSame(address1, address4); // --> Objects referencing the same memory space
