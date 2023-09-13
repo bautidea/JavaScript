@@ -49,17 +49,17 @@ console.log(courses.includes({ id: 1, name: 'a' })); // --> false
 // this function is called back as part of finding an element on this array.
 // 'course' is the object in an a array that we are going to itereate over.
 const course = courses.find(function (course) {
-  return course.name == 'a';
+  return course.name === 'a';
 });
 console.log(course); // --> { id: 1, name: 'a'}
 // With a course that is not in the array.
 const course2 = courses.find(function (course) {
-  return course.name == 'x';
+  return course.name === 'x';
 });
 console.log(course2); // --> undefined
 
 // * There is an exact same method to return the index.
 const course3 = courses.findIndex(function (course) {
-  return course.name == 'b';
+  return course.name === 'b';
 });
 console.log(course3); // --> 1
