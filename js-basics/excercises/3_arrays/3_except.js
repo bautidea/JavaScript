@@ -9,7 +9,7 @@ function except(array, excluded) {
   for (let number of array) {
     const isIncluded = excluded.includes(number);
 
-    if (isIncluded === false) finalArray.push(number);
+    if (!isIncluded) finalArray.push(number);
   }
 
   return finalArray;
