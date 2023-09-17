@@ -12,4 +12,4 @@ function isIncluded(array, number) {
 }
 
 console.log(isIncluded(arrayNumbers, 2)); // --> true
-console.log(isIncluded(arrayNumbers, 14)); // --> false
+console.log(isIncluded(arrayNumbers, 7)); // --> false
