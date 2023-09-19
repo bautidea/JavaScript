@@ -36,3 +36,6 @@ function varyingSum() {
   return total;
 }
 console.log(varyingSum(1, 2, 3, 4)); // --> 10
+
+// ! We can use the Rest Operator to create a function with a varying
+// ! number of parameters, we are going to see this in next lecture.
