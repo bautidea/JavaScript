@@ -37,8 +37,8 @@ console.log(person2.fullName()); // --> Bauti De Angelis.
 // *    console.log(person.fullName)
 // Thats were Getters and Setters come in play.
 
-// * Getters => Access properties on an object.
-// * Setters => Change (mutate) properties on an object.
+// ! Getters => Access properties on an object.
+// ! Setters => Change (mutate) properties on an object.
 const person3 = {
   firsName: 'Bauti',
   lastName: 'De Angelis',
