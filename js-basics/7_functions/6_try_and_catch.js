@@ -87,7 +87,7 @@ try {
   // We have to add the 'catch' block after.
   // In a 'catch block' we can get an error object and do something with it.
   // We give an identifier in the parenthesis, 'e' is the error object that we are
-  // throwing in line 56.
+  // throwing in line 62.
   console.log(e);
 }
 
