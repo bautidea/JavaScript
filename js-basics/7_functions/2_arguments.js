@@ -17,13 +17,13 @@ console.log(sum(1, 2, 3, 4)); // --> 3
 // on a function.
 // Every function in JS has a special object called argument
 function substract(a, b) {
-  console.log(arguments); // --> { [Iterator]  0: 4, 1: 3 }
+  console.log(arguments);
   // The returned console.log is an object, the keys we have in this
   // object are the indexes of the arguments passed to the function
   return a - b;
 }
 
-substract(4, 3);
+substract(4, 3); // --> { [Iterator]  0: 4, 1: 3 }
 
 // If you want to have a function with a varying number of parameters
 // to work with all the arguments that are passed to this function.
