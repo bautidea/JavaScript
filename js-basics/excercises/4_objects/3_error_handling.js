@@ -19,7 +19,8 @@ const countRedu = countOcurrences(numbers, 1);
 console.log(countRedu);
 
 try {
-  const test = countOcurrences(true, 1); // --> array.reduce is not a function.
+  const test = countOcurrences(true, 1);
+  console.log(test);
 } catch (e) {
-  console.log(e);
+  console.log(e); // --> [Error: Not an array]
 }
