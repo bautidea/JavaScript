@@ -22,7 +22,7 @@ console.log(count);
 function countOcurrencesRed(array, searchElement) {
   // Applying reduction.
   const output = array.reduce((accumulator, currentValue) => {
-    if (currentValue === searchElement) return accumulator++;
+    if (currentValue === searchElement) accumulator++;
     return accumulator;
   }, 0);
 
