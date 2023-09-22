@@ -16,14 +16,14 @@ console.log(`${person.firsName} ${person.lastName}`); // --> Bauti De Angelis.
 // every time.
 // * A better aproach is to define a method in the object, and move the expression there.
 const person2 = {
-  firsName: 'Bauti',
-  lastName: 'De Angelis',
+  firsName: 'Jahon',
+  lastName: 'Wick',
   fullName() {
-    return `${person.firsName} ${person.lastName}`;
+    return `${this.firsName} ${this.lastName}`;
   },
 };
 
-console.log(person2.fullName()); // --> Bauti De Angelis.
+console.log(person2.fullName()); // --> Jahon Wick
 
 // There are a couple problems with this approach:
 //  - This is a read only property, we cannot set the person full name
@@ -40,12 +40,12 @@ console.log(person2.fullName()); // --> Bauti De Angelis.
 // ! Getters => Access properties on an object.
 // ! Setters => Change (mutate) properties on an object.
 const person3 = {
-  firsName: 'Bauti',
-  lastName: 'De Angelis',
+  firsName: 'John',
+  lastName: 'Chi',
   // Prefixing with the 'get' keyword. So we can access the full name
   // like a property.
   get fullName() {
-    return `${person.firsName} ${person.lastName}`;
+    return `${this.firsName} ${this.lastName}`;
   },
   // To set this from the outside we need to add a setter.
   // This method needs a parameter, and its value will be what we have
@@ -58,8 +58,8 @@ const person3 = {
   },
 };
 
-console.log(person3.fullName); // --> Bauti De Angelis.
-console.log(person3); // --> { firsName: 'Bauti', lastName: 'De Angelis', fullName: [Getter/Setter] }
+console.log(person3.fullName); // --> John Chi
+console.log(person3); // --> { firsName: 'Jhon', lastName: 'Chi', fullName: [Getter/Setter] }
 
 person3.fullName = 'Jhon Cena';
 console.log(person3); // --> { firsName: 'Jhon', lastName: 'Cena', fullName: [Getter/Setter] }
