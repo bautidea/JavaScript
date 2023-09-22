@@ -28,6 +28,7 @@ console.log(circle); // --> Circle { radius: 10, defaultLocation: { x: 0, y: 0 }
 function AbstractedCircle(radius) {
   this.radius = radius;
 
+  // ! This are considered as private members of the object.
   let defaultLocation = { x: 0, y: 0 };
   let computeOptimumLocation = function () {
     // ....
