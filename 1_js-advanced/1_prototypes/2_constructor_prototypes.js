@@ -3,12 +3,12 @@
 function Cirlce(radius) {
   this.raidus = radius;
 }
-const circle = new Cirlce(10);
+const circle = new Circle(10);
 
 // In Js Functions are objects, so they have properties and methods.
 // We have Circle.prototype property that returnt the object that will be used
 // as the parent for object created by 'Circle' constructor.
-console.log(Cirlce.prototype); // --> Cicle {}
+console.log(Circle.prototype); // --> Circle {}
 // It the same as
 console.log(Object.getPrototypeOf(circle)); // --> Circle {}
 
