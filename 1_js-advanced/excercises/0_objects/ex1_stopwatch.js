@@ -9,14 +9,14 @@ function Stopwatch() {
   let stopTime = 0;
   let duration = 0;
 
-  this.start = function start() {
+  this.start = function () {
     // if timer is running the startTime will always be bigger than stopTime.
     if (startTime > stopTime) throw new Error('Stopwatch has already started');
 
     startTime = new Date();
   };
 
-  this.stop = function stop() {
+  this.stop = function () {
     // if timer is stoped the stopTime will always be bigger than startTime.
     if (stopTime >= startTime) throw new Error('Stopwatch is not started');
 
@@ -28,7 +28,7 @@ function Stopwatch() {
     duration += timeDiff;
   };
 
-  this.reset = function reset() {
+  this.reset = function () {
     duration = 0;
   };
 
