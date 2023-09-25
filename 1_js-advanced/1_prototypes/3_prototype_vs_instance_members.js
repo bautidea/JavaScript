@@ -107,3 +107,24 @@ const c6 = new Circle4(10);
 c6.move(); // --> draw move
 
 // The JS engine will find the 'draw()' method on the prototype.
+
+// One thing to have in mind is that is doesnt matter when you change the prototype.
+function Circle5(radius) {
+  this.radius = radius;
+
+  this.move = function () {
+    console.log('move');
+  };
+}
+
+// We can create an object first, and then modify the prototype.
+const c7 = new Circle5(1);
+
+Circle5.prototype.draw = function () {
+  console.log('draw');
+};
+
+// We can see that the draw method is available, because we are dealing with objects references,
+// we have a sinlge object in memory, as soon as we modify that the changes are applied
+// immediatly.
+c7.draw(); // --> draw
