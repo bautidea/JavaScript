@@ -1,14 +1,14 @@
-// function Circle(radius) {
-//   this.radius = radius;
-// }
+function Circle2(radius) {
+  this.radius = radius;
+}
 
-// Circle.prototype.draw = function () {
-//   console.log('draw');
-// };
+Circle2.prototype.draw = function () {
+  console.log('draw');
+};
 
-// Circle.prototype.duplicate = function () {
-//   console.log('duplicate');
-// };
+Circle2.prototype.duplicate = function () {
+  console.log('duplicate');
+};
 
 // Lets imagine that in a future we are going to add another object (like an square object), and this
 // new object should have a '.duplicate()' method with the same implementation.
