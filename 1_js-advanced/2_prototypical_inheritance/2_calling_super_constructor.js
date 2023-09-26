@@ -7,19 +7,19 @@ Shape.prototype.duplicate = function () {
   console.log('duplicate');
 };
 
-function Circle(radius) {
+function Square(radius) {
   this.radius = radius;
 }
 
-Circle.prototype = Object.create(Shape.prototype);
-Circle.prototype.constructor = Circle;
+Square.prototype = Object.create(Shape.prototype);
+Square.prototype.constructor = Square;
 
-Circle.prototype.draw = function () {
+Square.prototype.draw = function () {
   console.log('draw');
 };
 
 const sh = new Shape();
-const cr = new Circle(1);
+const cr = new Square(1);
 
 // If we logg 'cr' on the console, we can only see the radius property, thers no color here
 // and from the inheritance point of view, this 'cr' should have a color property.
