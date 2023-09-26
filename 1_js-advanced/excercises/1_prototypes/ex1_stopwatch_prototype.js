@@ -14,27 +14,28 @@ function Stopwatch() {
   // When puting the methods on the prototype, we can only access public members of Stopwatch().
   // Transforming variables to public.
   let startTime = 0;
+  let stopTime = 0;
+  let running = false;
+  let duration = 0;
+
   Object.defineProperty(this, 'startTime', {
     get: function () {
       return startTime;
     },
   });
 
-  let stopTime = 0;
   Object.defineProperty(this, 'stopTime', {
     get: function () {
       return stopTime;
     },
   });
 
-  let running = false;
   Object.defineProperty(this, 'running', {
     get: function () {
       return running;
     },
   });
 
-  let duration = 0;
   Object.defineProperty(this, 'duration', {
     get: function () {
       if (this.running) throw new Error('Stopwatch is running, stop it first');
@@ -43,12 +44,10 @@ function Stopwatch() {
   });
 }
 
-const sw = new Stopwatch();
-
 Stopwatch.prototype.start = function () {
   if (this.running) throw new Error('Stopwatch has already started');
 
-  this.startTime = new Date();
+  this.startTime = new Date().getTime();
 
   this.running = true;
 };
@@ -56,9 +55,7 @@ Stopwatch.prototype.start = function () {
 Stopwatch.prototype.stop = function () {
   if (!this.running) throw new Error('Stopwatch is not started');
 
-  this.running = false;
-
-  this.stopTime = new Date();
+  this.stopTime = new Date().getTime();
 
   let timeDiff = stopTime - startTime; // in ms.
   timeDiff /= 1000; // transforming to secs.
@@ -68,9 +65,13 @@ Stopwatch.prototype.stop = function () {
   // but this will lead to the problem that this value can be modified from
   // outside the object, and thats is a bad implementation.
   duration += timeDiff;
+
+  this.running = false;
 };
 
 Stopwatch.prototype.reset = function () {
   if (this.running) throw new Error('Stopwatch is running, stop it first');
   duration = 0;
 };
+
+const sw = new Stopwatch();
