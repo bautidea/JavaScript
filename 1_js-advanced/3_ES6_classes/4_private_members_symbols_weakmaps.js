@@ -134,7 +134,7 @@ class Circle5 {
   }
 }
 
-// Technically we can access the radius private property if we get access to the WeakMap defined in _radius5 (line 93),
+// Technically we can access the radius private property if we get access to the WeakMap defined in _radius5 (line 94),
 // but we can hide this _radius5 in a module, and only export the Cirlce5 class, and we wont have access to this WeakMap.
 const c5 = new Circle5(2);
 console.log(c5); // --> Circle5 {}
