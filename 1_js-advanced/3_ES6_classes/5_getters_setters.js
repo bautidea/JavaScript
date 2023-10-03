@@ -33,17 +33,17 @@ const _radius2 = new WeakMap();
 
 class Circle2 {
   constructor(radius) {
-    _radius.set(this, radius);
+    _radius2.set(this, radius);
   }
 
   get radius() {
-    return _radius.get(this);
+    return _radius2.get(this);
   }
 
   // We can also define a setter really easily.
   set radius(value) {
     if (value <= 0) throw new Error('Invalid radius');
-    _radius.set(this, value);
+    _radius2.set(this, value);
   }
 }
 
