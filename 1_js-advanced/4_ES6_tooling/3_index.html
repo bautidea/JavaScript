@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle</title>
+  </head>
+  <body>
+    <img
+      src="./img/Captura de pantalla 2023-10-04 225700.png"
+      alt="This is a screenshot img"
+    />
+    <!--
+        Here in our script element we need to change the tyope of this script element to 'module' .
+        After applying this we will get a different error of 'GET request' (is in the html img), because
+        in index.js we are trying to load the module './circle' but the name of the file is './circle.js'
+    -->
+    <script type="module" src="./3_ES6_modules.js"></script>
+  </body>
+</html>

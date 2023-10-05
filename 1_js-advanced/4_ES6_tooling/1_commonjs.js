@@ -18,7 +18,7 @@
 
 // To import a module we use the 'require()' function, it is a part of the CommonJS format.
 // Here we pass a related path to the module we want to import.
-const Circle = require('./1_commonjs_module'); // it isnt necessary to add .js it is inferred.
+const Circle = require('./1_commonjs_circle'); // it isnt necessary to add .js it is inferred.
 // In the Circle module we are only exporting the Circle class, the '_radius' WeakMap is not accessible
 // from this module.
 
