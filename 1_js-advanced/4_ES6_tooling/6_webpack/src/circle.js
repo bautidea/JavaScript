@@ -6,6 +6,7 @@ export class Circle {
   }
 
   draw() {
+    console.log('Hello from circle module :P');
     console.log(`Circle with radius ${_radius.get(this)}`);
   }
 }
