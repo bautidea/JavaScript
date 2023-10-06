@@ -1,3 +1,4 @@
+// ! This file is mearly for demostration, its not the workflow we use when building real applications.
 // We use the command prompt to initialize a node project in this folder, by running
 // * npm init --yes
 // This will create a file in the folder called 'package.json' which is a identification
